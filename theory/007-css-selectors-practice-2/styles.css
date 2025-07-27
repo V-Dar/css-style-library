@@ -1,0 +1,22 @@
+h2#red {
+    color: red;
+}
+h2#blue {
+    color: blue;
+}
+h2#orange {
+    color: orange;
+}
+h2#brown {
+    color: brown;
+}
+h2#darkblue {
+    color: darkblue;
+}
+h1, h2{
+    font-style: italic;
+}
+img {
+    height: 50px;
+    width: 150px;
+}
