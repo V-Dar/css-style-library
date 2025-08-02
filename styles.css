@@ -1,0 +1,42 @@
+body {
+    background-color: bisque;
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cell {
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 45%;
+    border-style: dotted;
+    border-width: 5px;
+    border-color: blueviolet;
+    box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.397);
+
+}
+
+h1,
+p {
+    text-align: center;
+    color: rgb(105, 1, 74);
+}
+
+.cell:hover {
+    animation: scaleAnim 0.4s both;
+}
+
+@keyframes scaleAnim {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
