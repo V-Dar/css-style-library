@@ -2,23 +2,92 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" lang="ru">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Прямоугольник и круг</title>
 
     <style>
+        body {
+            background-color: #868686;
+        }
+
         .circle {
-            width: 100px;
+            width: 80px;
+            height: 80px;
+            background-color: aqua;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: red;
+            font-weight: 900;
+            font-size: 12px;
+            line-height: 80px;
+        }
+
+        .rectangle {
+            width: 200px;
             height: 100px;
             background-color: blue;
-            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: box-shadow 1s ease-in-out;
+        }
+
+        .rectangle:hover {
+            background: linear-gradient(to right, blue, red);
+            box-shadow: -15px 0 10px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .circle:active {
+            background: radial-gradient(green, yellow);
+            box-shadow: 10px 5px 30px 0 yellow;
+            animation: move-rect 3s infinite;
+        }
+
+        .circle:hover {
+            background-color: yellow;
+        }
+
+        @keyframes move-rect {
+            0% {
+                top: 10%;
+                left: 10%;
+            }
+
+            25% {
+                top: 40%;
+                left: 40%;
+            }
+
+            50% {
+                top: 70%;
+                left: 70%;
+            }
+
+            75% {
+                top: 50%;
+                left: 20%;
+            }
+
+            100% {
+                top: 10%;
+                left: 10%;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="circle"></div>
+    <div class="rectangle"></div>
+    <div class="circle">
+        Click and hold
+    </div>
 
 </body>
 
