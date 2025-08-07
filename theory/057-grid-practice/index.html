@@ -5,17 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* .container {} */
+        .container {
+            display: grid;
+            color: white;
+            gap: 10px;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px 70px;
+        }
 
-        /* цвет фона: #465f68;*/
-        /* цвет шрифта: white; */
-        /* .item {} */
+        .item {
+            display: flex;
+            background-color: #465f68;
+            justify-content: center;
+            align-items: center;
+        }
 
         /* .expands {} */
 
-        /* .fixed {} */
+        .fixed {
+            width: 300px;
+            height: 100px;
+        }
 
-        /* .flexible {} */
+        .flexible {
+            min-width: 200px;
+            max-width: 300px;
+        }
     </style>
     <title>Grid Layout</title>
 </head>
@@ -31,8 +46,7 @@
         <div class="item fixed">300px x 100px</div>
         <div class="item expands">😎 ??? x 100px</div>
         <div class="item flexible">200px — 300px x 100px</div>
-
-        <div class="item fixed">🤪 300px x 70px</div>
+        <div class="item" style="width: 300px; height: 70px;">🤪 300px x 70px</div>
     </div>
 </body>
 
