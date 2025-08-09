@@ -7,18 +7,69 @@
     <title>Grid Layout</title>
     <style>
 
+        .grid-container {
+            color: white;
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr 1fr;
+            grid-template-rows: 100px 1fr 100px;
+            background-color: rgb(207, 221, 221);
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            grid-column: span 4;
+            justify-content: center;
+            align-items: center;
+            background-color: brown;
+        }
+
+        .aside {
+            background-color: blueviolet;
+        }
+
+        .footer {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            grid-row: 3;
+            background-color: gray;
+            grid-column: span 4; 
+        }
+
+        .main {
+            margin: 10px;
+            display: flex;
+          
+            grid-column: span 3;
+            gap: 10px;
+            justify-content: space-around
+        }
+
+        .section {
+            display: flex; 
+            flex-grow: 1;
+            background-color: rgb(214, 173, 122);
+        }
+        @media screen and (max-width: 500px) {
+            .main {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="header">Header</div>
-    <div class="aside">Side Panel</div>
-    <div class="main">
-        <div class="section">Content Section 1</div>
-        <div class="section">Content Section 2</div>
-        <div class="section">Content Section 3</div>
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="aside">Side Panel</div>
+        <div class="main">
+            <div class="section">Content Section 1</div>
+            <div class="section">Content Section 2</div>
+            <div class="section">Content Section 3</div>
+        </div>
+        <div class="footer">Footer</div>
     </div>
-    <div class="footer">Footer</div>
 </body>
 
 </html>
